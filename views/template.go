@@ -12,8 +12,8 @@ import (
 	"path"
 
 	"github.com/gorilla/csrf"
-	"github.com/whyttea/lenslocked/context"
-	"github.com/whyttea/lenslocked/models"
+	"github.com/yu-teo/lenslocked/context"
+	"github.com/yu-teo/lenslocked/models"
 )
 
 type public interface {

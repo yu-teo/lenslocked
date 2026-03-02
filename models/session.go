@@ -6,7 +6,7 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"github.com/whyttea/lenslocked/rand"
+	"github.com/yu-teo/lenslocked/rand"
 )
 
 type Session struct {

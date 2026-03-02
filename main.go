@@ -9,11 +9,11 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/gorilla/csrf"
 	"github.com/joho/godotenv"
-	"github.com/whyttea/lenslocked/controllers"
-	"github.com/whyttea/lenslocked/migrations"
-	"github.com/whyttea/lenslocked/models"
-	"github.com/whyttea/lenslocked/templates"
-	"github.com/whyttea/lenslocked/views"
+	"github.com/yu-teo/lenslocked/controllers"
+	"github.com/yu-teo/lenslocked/migrations"
+	"github.com/yu-teo/lenslocked/models"
+	"github.com/yu-teo/lenslocked/templates"
+	"github.com/yu-teo/lenslocked/views"
 )
 
 // func executeTemplate(w http.ResponseWriter, filepath string) {

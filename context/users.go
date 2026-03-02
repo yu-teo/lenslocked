@@ -3,7 +3,7 @@ package context
 import (
 	"context"
 
-	"github.com/whyttea/lenslocked/models"
+	"github.com/yu-teo/lenslocked/models"
 )
 
 type key string

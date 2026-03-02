@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/whyttea/lenslocked/context"
-	"github.com/whyttea/lenslocked/models"
+	"github.com/yu-teo/lenslocked/context"
+	"github.com/yu-teo/lenslocked/models"
 )
 
 type Galleries struct {

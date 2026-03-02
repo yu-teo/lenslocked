@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/whyttea/lenslocked/context"
-	apperror "github.com/whyttea/lenslocked/errors"
-	"github.com/whyttea/lenslocked/models"
+	"github.com/yu-teo/lenslocked/context"
+	apperror "github.com/yu-teo/lenslocked/errors"
+	"github.com/yu-teo/lenslocked/models"
 )
 
 type Users struct {

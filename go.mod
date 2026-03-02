@@ -1,4 +1,4 @@
-module github.com/whyttea/lenslocked
+module github.com/yu-teo/lenslocked
 
 go 1.22.4
 

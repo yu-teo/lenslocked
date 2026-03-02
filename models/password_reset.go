@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/whyttea/lenslocked/rand"
+	"github.com/yu-teo/lenslocked/rand"
 )
 
 const (

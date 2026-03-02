@@ -176,6 +176,7 @@ func main() {
 	usersC.Templates.CheckYourEmail = views.Must(views.ParseFS(templates.FS, "check-your-email.gohtml", "tailwind.gohtml"))
 	usersC.Templates.ResetPassword = views.Must(views.ParseFS(templates.FS, "reset-pw.gohtml", "tailwind.gohtml"))
 	galleriesC.Templates.New = views.Must(views.ParseFS(templates.FS, "galleries/new.gohtml", "tailwind.gohtml"))
+	galleriesC.Templates.Edit = views.Must(views.ParseFS(templates.FS, "galleries/edit.gohtml", "tailwind.gohtml"))
 
 	// setup our router and routes
 	r := chi.NewRouter()
@@ -210,7 +211,9 @@ func main() {
 		r.Group(func(r chi.Router) {
 			r.Use(umw.RequireUser)
 			r.Get("/new", galleriesC.New)
+			r.Get("/{id}/edit", galleriesC.Edit)
 			r.Post("/", galleriesC.Create)
+			r.Post("/{id}", galleriesC.Update)
 		})
 	})
 	r.NotFound(func(w http.ResponseWriter, r *http.Request) {

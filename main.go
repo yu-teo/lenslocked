@@ -186,14 +186,9 @@ func main() {
 	r.Use(csrfMw)
 	r.Use(umw.SetUser)
 
-	tpl := views.Must(views.ParseFS(templates.FS, "home.gohtml", "tailwind.gohtml"))
-	r.Get("/", controllers.StaticHandler(tpl))
-	tpl = views.Must(views.ParseFS(templates.FS, "contact.gohtml", "tailwind.gohtml"))
-	r.Get("/contact", controllers.StaticHandler(tpl))
-	// tpl = views.Must(views.Parse(filepath.Join("templates", "faq.gohtml")))
-	tpl = views.Must(views.ParseFS(templates.FS, "faq.gohtml", "tailwind.gohtml"))
-
-	r.Get("/faq", controllers.FAQ(tpl))
+	r.Get("/", controllers.StaticHandler(views.Must(views.ParseFS(templates.FS, "home.gohtml", "tailwind.gohtml"))))
+	r.Get("/contact", controllers.StaticHandler(views.Must(views.ParseFS(templates.FS, "contact.gohtml", "tailwind.gohtml"))))
+	r.Get("/faq", controllers.FAQ(views.Must(views.ParseFS(templates.FS, "faq.gohtml", "tailwind.gohtml"))))
 	r.Get("/signup", usersC.New)
 	r.Post("/signup", usersC.Create)
 	r.Post("/users", usersC.Create)
@@ -218,6 +213,7 @@ func main() {
 			r.Post("/", galleriesC.Create)
 			r.Post("/{id}", galleriesC.Update)
 			r.Get("/", galleriesC.Index)
+			r.Post("/{id}/delete", galleriesC.Delete)
 		})
 	})
 	r.NotFound(func(w http.ResponseWriter, r *http.Request) {

@@ -1,2 +1,4 @@
 # Env variables
 .env
+# test images used during development
+images/
